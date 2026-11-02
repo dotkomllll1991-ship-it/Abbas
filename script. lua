@@ -1,1 +1,35 @@
-print("Script executed successfully!")
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local ActionButton = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.Name = "AbbasCustomHub"
+
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MainFrame.Position = UDim2.new(0.5, -125, 0.5, -100)
+MainFrame.Size = UDim2.new(0, 250, 0, 200)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Text = "Abbas Hub"
+Title.TextColor3 = Color3.fromRGB(255, 140, 0)
+Title.TextSize = 18
+Title.Font = Enum.Font.SourceSansBold
+
+ActionButton.Parent = MainFrame
+ActionButton.BackgroundColor3 = Color3.fromRGB(255, 140, 0)
+ActionButton.Position = UDim2.new(0.1, 0, 0.4, 0)
+ActionButton.Size = UDim2.new(0.8, 0, 0, 45)
+ActionButton.Text = "Click Me"
+ActionButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ActionButton.TextSize = 16
+ActionButton.Font = Enum.Font.SourceSansBold
+
+ActionButton.MouseButton1Click:Connect(function()
+    print("Button clicked successfully!")
+end)
